@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TruckController;
 use App\Http\Controllers\BayStatusController;
 use App\Http\Controllers\BayController;
+use App\Http\Controllers\ScheduleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +36,7 @@ Route::post('bays', [BayController::class, 'store']);
 Route::put('bays/{bay}', [BayController::class, 'update']);
 Route::delete('bays/{bay}', [BayController::class, 'delete']);
 
-Route::get('schedules', [BayController::class, 'index']);
-Route::post('schedules', [BayController::class, 'store']);
-Route::put('schedules/{schedule}', [BayController::class, 'update']);
-Route::delete('schedules/{schedule}', [BayController::class, 'delete']);
+Route::get('schedules', [ScheduleController::class, 'index']);
+Route::post('schedules', [ScheduleController::class, 'store']);
+Route::put('schedules/{schedule}', [ScheduleController::class, 'update']);
+Route::delete('schedules/{schedule}', [ScheduleController::class, 'delete']);
