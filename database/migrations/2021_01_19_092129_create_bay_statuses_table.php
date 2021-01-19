@@ -18,6 +18,19 @@ class CreateBayStatusesTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        DB::table('bay_statuses')->insert(
+            [
+                [
+                    'name' => 'Not in use',
+                    'created_at' => now()
+                ],
+                [
+                    'name' => 'In use',
+                    'created_at' => now()
+                ],
+            ]
+        );
     }
 
     /**

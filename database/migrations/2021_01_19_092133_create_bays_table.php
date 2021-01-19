@@ -22,6 +22,31 @@ class CreateBaysTable extends Migration
             // Foreign key relation
             $table->foreign('bay_status_id')->references('id')->on('bay_statuses')->onDelete('cascade')->onUpdate('cascade');
         });
+
+        DB::table('bays')->insert(
+            [
+                [
+                    'number' => 1,
+                    'bay_status_id' => 1,
+                    'created_at' => now()
+                ],
+                [
+                    'number' => 2,
+                    'bay_status_id' => 1,
+                    'created_at' => now()
+                ],
+                [
+                    'number' => 3,
+                    'bay_status_id' => 1,
+                    'created_at' => now()
+                ],
+                [
+                    'number' => 4,
+                    'bay_status_id' => 1,
+                    'created_at' => now()
+                ],
+            ]
+        );
     }
 
     /**

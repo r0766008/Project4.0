@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTruckBaysTable extends Migration
+class CreateSchedulesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateTruckBaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('truck_bays', function (Blueprint $table) {
+        Schema::create('schedules', function (Blueprint $table) {
             $table->id();
+            $table->date('date');
+            $table->time('time');
             $table->foreignId('truck_id');
             $table->foreignId('bay_id');
             $table->timestamps();
@@ -23,6 +25,18 @@ class CreateTruckBaysTable extends Migration
             $table->foreign('truck_id')->references('id')->on('trucks')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('bay_id')->references('id')->on('bays')->onDelete('cascade')->onUpdate('cascade');
         });
+
+        DB::table('schedules')->insert(
+            [
+                [
+                    'date' => \Carbon\Carbon::now(),
+                    'time' => '12:30',
+                    'truck_id' => 1,
+                    'bay_id' => 1,
+                    'created_at' => now()
+                ],
+            ]
+        );
     }
 
     /**
@@ -32,6 +46,6 @@ class CreateTruckBaysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('truck_bays');
+        Schema::dropIfExists('schedules');
     }
 }

@@ -20,6 +20,17 @@ class CreateTrucksTable extends Migration
             $table->string('company')->nullable();
             $table->timestamps();
         });
+
+        DB::table('trucks')->insert(
+            [
+                [
+                    'number_plate' => '1-FOP-464',
+                    'rfid' => 'fds8y-ghvb6-45ghf',
+                    'company' => 'IT',
+                    'created_at' => now()
+                ],
+            ]
+        );
     }
 
     /**
