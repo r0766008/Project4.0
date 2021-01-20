@@ -12,6 +12,16 @@ class TruckController extends Controller
         return Truck::all();
     }
 
+    public function getBayByInfo($info) {
+        $result = Truck::select('number_plate', 'rfid', 'company', 'date', 'time', 'number AS bay_number')
+            ->where('number_plate', $info)
+            ->orWhere('rfid', $info)
+            ->join('schedules', 'trucks.id', '=', 'schedules.truck_id')
+            ->join('bays', 'schedules.bay_id', '=', 'bays.id')
+            ->get();
+        return response()->json($result);
+    }
+
     public function store(Request $request)
     {
         $truck = Truck::create($request->all());

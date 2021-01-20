@@ -22,6 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('trucks', [TruckController::class, 'index']);
+Route::get('truck/{info}', [TruckController::class, 'getBayByInfo']);
 Route::post('trucks', [TruckController::class, 'store']);
 Route::put('trucks/{truck}', [TruckController::class, 'update']);
 Route::delete('trucks/{truck}', [TruckController::class, 'delete']);
