@@ -16,7 +16,7 @@ class CreateBaysTable extends Migration
         Schema::create('bays', function (Blueprint $table) {
             $table->id();
             $table->integer('number');
-            $table->foreignId('bay_status_id');
+            $table->foreignId('bay_status_id')->default('1');
             $table->timestamps();
 
             // Foreign key relation
@@ -27,22 +27,18 @@ class CreateBaysTable extends Migration
             [
                 [
                     'number' => 1,
-                    'bay_status_id' => 1,
                     'created_at' => now()
                 ],
                 [
                     'number' => 2,
-                    'bay_status_id' => 1,
                     'created_at' => now()
                 ],
                 [
                     'number' => 3,
-                    'bay_status_id' => 1,
                     'created_at' => now()
                 ],
                 [
                     'number' => 4,
-                    'bay_status_id' => 1,
                     'created_at' => now()
                 ],
             ]

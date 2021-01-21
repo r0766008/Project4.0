@@ -24,7 +24,7 @@ class CreateTrucksTable extends Migration
         DB::table('trucks')->insert(
             [
                 [
-                    'number_plate' => '1-FOP-464',
+                    'number_plate' => '1TXB732',
                     'rfid' => 'fds8y-ghvb6-45ghf',
                     'company' => 'IT',
                     'created_at' => now()

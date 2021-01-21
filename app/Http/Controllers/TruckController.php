@@ -42,4 +42,8 @@ class TruckController extends Controller
 
         return response()->json(null, 204);
     }
+
+    public function webIndex() {
+        return view('trucks.trucks');
+    }
 }

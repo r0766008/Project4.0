@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Cruds\TruckController;
+use App\Http\Controllers\Cruds\BayController;
+use App\Http\Controllers\Cruds\ScheduleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes(['register' => false]);
+Route::view('/', 'home');
+Route::middleware(['auth'])->group(function () {
+    Route::resource('bays', BayController::class);
+    Route::resource('trucks', TruckController::class);
 });
+

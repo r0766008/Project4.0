@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Bay extends Model
 {
     use HasFactory;
+
+    protected $table = 'bays';
+    public $timestamps = true;
+
     protected $fillable = ['number', 'bay_status_id'];
 }

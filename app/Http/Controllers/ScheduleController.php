@@ -32,4 +32,8 @@ class ScheduleController extends Controller
 
         return response()->json(null, 204);
     }
+
+    public function webIndex() {
+        return view('schedules.schedules');
+    }
 }
