@@ -13,7 +13,7 @@ class TruckController extends Controller
     }
 
     public function getBayByInfo($info) {
-        $result = Truck::select('license_plate', 'rfid', 'company', 'date', 'time', 'number AS bay_number')
+        $result = Truck::select('license_plate', 'rfid', 'company', 'date', 'eta', 'ata', 'atd', 'number AS bay_number')
             ->where('license_plate', $info)
             ->orWhere('rfid', $info)
             ->join('schedules', 'trucks.id', '=', 'schedules.truck_id')

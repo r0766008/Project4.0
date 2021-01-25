@@ -20,32 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Cruds/ScheduleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ScheduleStatus.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102535_create_schedule_statuses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/schedules/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/schedules/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/schedules/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/schedules/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Cruds/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Cruds/BayController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Cruds/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Cruds/TruckController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TruckController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bay.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BayStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BayStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Schedule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Truck.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Truck.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_092123_create_trucks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092123_create_trucks_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_102539_create_schedules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102539_create_schedules_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bays/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bays/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bays/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bays/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bays/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bays/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedules/schedules.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trucks/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trucks/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trucks/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trucks/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trucks/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trucks/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trucks/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trucks/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +188,7 @@
       <workItem from="1611130071984" duration="631000" />
       <workItem from="1611135852683" duration="3670000" />
       <workItem from="1611214409935" duration="13802000" />
-      <workItem from="1611560868249" duration="7258000" />
+      <workItem from="1611560868249" duration="7927000" />
     </task>
     <servers />
   </component>
