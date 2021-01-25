@@ -31,8 +31,8 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Number plate:</strong>
-                    <input type="text" name="number_plate" class="form-control" placeholder="Number plate">
+                    <strong>License plate:</strong>
+                    <input type="text" name="license_plate" class="form-control" placeholder="License plate">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

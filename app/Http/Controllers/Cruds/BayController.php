@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Cruds;
 
 use App\Http\Controllers\Controller;
 use App\Models\Bay;
+use App\Models\BayStatus;
 use Illuminate\Http\Request;
 
 class BayController extends Controller
@@ -15,7 +16,7 @@ class BayController extends Controller
      */
     public function index()
     {
-        $bays = Bay::paginate(5);
+        $bays = Bay::with('status')->paginate(5);
 
         return view('bays.index', compact('bays'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -55,8 +56,9 @@ class BayController extends Controller
      * @param  \App\Models\Bay  $bay
      * @return \Illuminate\Http\Response
      */
-    public function show(Bay $bay)
+    public function show($id)
     {
+        $bay = Bay::with('status')->findOrFail($id);
         return view('bays.show', compact('bay'));
     }
 
@@ -68,7 +70,8 @@ class BayController extends Controller
      */
     public function edit(Bay $bay)
     {
-        return view('bays.edit', compact('bay'));
+        $statuses = BayStatus::get();
+        return view('bays.edit', compact('bay', 'statuses'));
     }
 
     /**

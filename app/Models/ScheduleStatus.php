@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BayStatus extends Model
+class ScheduleStatus extends Model
 {
     use HasFactory;
     protected $fillable = ['name'];
 
-    public function bays()
+    public function schedules()
     {
-        return $this->hasMany('App\Models\Bay');
+        return $this->hasMany('App\Models\Schedule');
     }
 }

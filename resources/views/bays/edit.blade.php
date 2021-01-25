@@ -37,6 +37,16 @@
                     <input type="text" name="number" value="{{ $bay->number }}" class="form-control" placeholder="Number">
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Status:</strong>
+                    <select class="form-control" name="bay_status_id" id="bay_status_id">
+                        @foreach($statuses as $status)
+                            <option value="{{ $status->id }}"{{ ($bay->bay_status_id ==  $status->id ? 'selected' : '') }}>{{ $status->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>

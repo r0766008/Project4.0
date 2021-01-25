@@ -25,7 +25,7 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Number plate</th>
+                    <th scope="col">License plate</th>
                     <th scope="col">RFID</th>
                     <th scope="col">Company</th>
                     <th scope="col">Date Created</th>
@@ -36,7 +36,7 @@
             @foreach ($trucks as $truck)
                 <tr data-href="{{ route('trucks.show', $truck->id) }}" onclick="window.location.href = this.getAttribute('data-href');" style="cursor: pointer;">
                     <th scope="row">{{ ++$i }}</th>
-                    <td>{{ $truck->number_plate }}</td>
+                    <td>{{ $truck->license_plate }}</td>
                     <td>{{ $truck->rfid }}</td>
                     <td>{{ $truck->company }}</td>
                     <td>{{ date_format($truck->created_at, 'jS M Y') }}</td>

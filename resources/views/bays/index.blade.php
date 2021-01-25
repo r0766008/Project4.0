@@ -36,7 +36,7 @@
                 <tr data-href="{{ route('bays.show', $bay->id) }}" onclick="window.location.href = this.getAttribute('data-href');" style="cursor: pointer;">
                     <th scope="row">{{ ++$i }}</th>
                     <td>{{ $bay->number }}</td>
-                    <td>{{ $bay->bay_status_id }}</td>
+                    <td>{{ $bay->status->name }}</td>
                     <td>{{ date_format($bay->created_at, 'jS M Y') }}</td>
                     <td>
                         <form action="{{ route('bays.destroy', $bay->id) }}" method="POST">

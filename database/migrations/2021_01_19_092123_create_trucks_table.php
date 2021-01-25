@@ -15,7 +15,7 @@ class CreateTrucksTable extends Migration
     {
         Schema::create('trucks', function (Blueprint $table) {
             $table->id();
-            $table->string('number_plate');
+            $table->string('license_plate');
             $table->string('rfid');
             $table->string('company')->nullable();
             $table->timestamps();
@@ -24,9 +24,21 @@ class CreateTrucksTable extends Migration
         DB::table('trucks')->insert(
             [
                 [
-                    'number_plate' => '1TXB732',
+                    'license_plate' => '1TXB732',
                     'rfid' => 'fds8y-ghvb6-45ghf',
                     'company' => 'IT',
+                    'created_at' => now()
+                ],
+                [
+                    'license_plate' => '1OAF735',
+                    'rfid' => 'we123-ghjk8-aafsd',
+                    'company' => '3-IT',
+                    'created_at' => now()
+                ],
+                [
+                    'license_plate' => '1KHU915',
+                    'rfid' => 'xz423-qwek8-sdfgh',
+                    'company' => 'Renard SNC',
                     'created_at' => now()
                 ],
             ]

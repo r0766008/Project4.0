@@ -18,8 +18,8 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Number plate:</strong>
-                {{ $truck->number_plate }}
+                <strong>License plate:</strong>
+                {{ $truck->license_plate }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

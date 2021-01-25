@@ -8,9 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Bay extends Model
 {
     use HasFactory;
-
-    protected $table = 'bays';
-    public $timestamps = true;
-
     protected $fillable = ['number', 'bay_status_id'];
+
+    public function status()
+    {
+        return $this->belongsTo('App\Models\BayStatus', 'bay_status_id')->withDefault();
+    }
+
+    public function schedules()
+    {
+        return $this->hasMany('App\Models\Schedule');
+    }
 }

@@ -20,5 +20,6 @@ Route::view('/', 'home');
 Route::middleware(['auth'])->group(function () {
     Route::resource('bays', BayController::class);
     Route::resource('trucks', TruckController::class);
+    Route::resource('schedules', ScheduleController::class);
 });
 

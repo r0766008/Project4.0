@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Truck extends Model
 {
     use HasFactory;
-    protected $fillable = ['number_plate', 'rfid', 'company'];
+    protected $fillable = ['license_plate', 'rfid', 'company'];
+
+    public function schedules()
+    {
+        return $this->hasMany('App\Models\Schedule');
+    }
 }

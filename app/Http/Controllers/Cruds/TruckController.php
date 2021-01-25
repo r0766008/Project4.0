@@ -40,7 +40,7 @@ class TruckController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'number_plate' => 'required',
+            'license_plate' => 'required',
             'rfid' => 'required',
             'company' => 'required'
         ]);
@@ -83,7 +83,7 @@ class TruckController extends Controller
     public function update(Request $request, Truck $truck)
     {
         $request->validate([
-            'number_plate' => 'required',
+            'license_plate' => 'required',
             'rfid' => 'required',
             'company' => 'required'
         ]);
