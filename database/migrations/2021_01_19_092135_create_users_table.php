@@ -17,38 +17,41 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->boolean('admin')->default(false);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->foreignId('truck_id')->nullable();
+            $table->foreignId('role_id')->default(1);
             $table->rememberToken();
             $table->timestamps();
 
             // Foreign key relation
-            $table->foreign('truck_id')->references('id')->on('trucks')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade')->onUpdate('cascade');
         });
 
         DB::table('users')->insert(
             [
                 [
-                    'name' => 'Admin',
-                    'email' => 'admin@admin.com',
-                    'admin' => true,
-                    'truck_id' => null,
-                    'password' => \Illuminate\Support\Facades\Hash::make('admin1234'),
-                    'created_at' => now(),
-                    'email_verified_at' => now()
-
-                ],
-                [
-                    'name' => 'Tester',
+                    'name' => 'Trucker',
                     'email' => 'test.test@test.com',
-                    'admin' => false,
-                    'truck_id' => 2,
+                    'role_id' => 1,
                     'password' => \Illuminate\Support\Facades\Hash::make('test1234'),
                     'created_at' => now(),
                     'email_verified_at' => now()
-
+                ],
+                [
+                    'name' => 'Admin',
+                    'email' => 'admin@admin.com',
+                    'role_id' => 2,
+                    'password' => \Illuminate\Support\Facades\Hash::make('admin1234'),
+                    'created_at' => now(),
+                    'email_verified_at' => now()
+                ],
+                [
+                    'name' => 'Logistic Employee',
+                    'email' => 'logistic@employee.com',
+                    'role_id' => 3,
+                    'password' => \Illuminate\Support\Facades\Hash::make('test1234'),
+                    'created_at' => now(),
+                    'email_verified_at' => now()
                 ]
             ]
         );
