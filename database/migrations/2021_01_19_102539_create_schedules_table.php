@@ -34,10 +34,82 @@ class CreateSchedulesTable extends Migration
             [
                 [
                     'date' => \Carbon\Carbon::now(),
-                    'eta' => '12:30',
+                    'eta' => '08:00',
+                    'ata' => '08:03',
+                    'atd' => '08:47',
                     'truck_id' => 1,
                     'bay_id' => 1,
+                    'schedule_status_id' => 3,
+                    'created_at' => now()
+                ],
+                [
+                    'date' => \Carbon\Carbon::now(),
+                    'eta' => '08:00',
+                    'ata' => '08:01',
+                    'atd' => '08:42',
+                    'truck_id' => 2,
+                    'bay_id' => 2,
+                    'schedule_status_id' => 3,
+                    'created_at' => now()
+                ],
+                [
+                    'date' => \Carbon\Carbon::now(),
+                    'eta' => '08:00',
+                    'ata' => '07:58',
+                    'atd' => '08:53',
+                    'truck_id' => 3,
+                    'bay_id' => 3,
+                    'schedule_status_id' => 3,
+                    'created_at' => now()
+                ],
+                [
+                    'date' => \Carbon\Carbon::now(),
+                    'eta' => '08:00',
+                    'ata' => '08:08',
+                    'atd' => '08:58',
+                    'truck_id' => 4,
+                    'bay_id' => 4,
+                    'schedule_status_id' => 3,
+                    'created_at' => now()
+                ],
+                [
+                    'date' => \Carbon\Carbon::now(),
+                    'eta' => '09:00',
+                    'ata' => '09:05',
+                    'atd' => null,
+                    'truck_id' => 1,
+                    'bay_id' => 1,
+                    'schedule_status_id' => 2,
+                    'created_at' => now()
+                ],
+                [
+                    'date' => \Carbon\Carbon::now(),
+                    'eta' => '09:00',
+                    'ata' => null,
+                    'atd' => null,
+                    'truck_id' => 2,
+                    'bay_id' => 2,
                     'schedule_status_id' => 1,
+                    'created_at' => now()
+                ],
+                [
+                    'date' => \Carbon\Carbon::now(),
+                    'eta' => '09:00',
+                    'ata' => null,
+                    'atd' => null,
+                    'truck_id' => 3,
+                    'bay_id' => 3,
+                    'schedule_status_id' => 1,
+                    'created_at' => now()
+                ],
+                [
+                    'date' => \Carbon\Carbon::now(),
+                    'eta' => '09:00',
+                    'ata' => '09:02',
+                    'atd' => null,
+                    'truck_id' => 4,
+                    'bay_id' => 4,
+                    'schedule_status_id' => 2,
                     'created_at' => now()
                 ],
             ]

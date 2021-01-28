@@ -17,7 +17,7 @@ class TruckController extends Controller
 
     public function registerTruckArrival($info) {
         $currentDay = Carbon::now();
-        $result = $this->getTruck($currentDay, $info);
+        $result = $this->getTruck($currentDay, $info, 1);
         if ($result->count() > 0) {
             Schedule::where([['date', $currentDay->toDateString()], ['truck_id', $result[0]->id], ['schedule_status_id', 1]])
                 ->first()
@@ -29,7 +29,7 @@ class TruckController extends Controller
 
     public function registerTruckDeparture($info) {
         $currentDay = Carbon::now();
-        $result = $this->getTruck($currentDay, $info);
+        $result = $this->getTruck($currentDay, $info, 2);
         if ($result->count() > 0) {
             Schedule::where([['date', 'like', $currentDay->toDateString()], ['truck_id', 'like', $result[0]->id], ['schedule_status_id', 'like', 2]])
                 ->first()
@@ -38,16 +38,16 @@ class TruckController extends Controller
                 Bay::where('number', 'like', $result[0]->bay_number)->first()->update(['bay_status_id' => 1]);
             }
         }
-        return response()->json($result);
+        return response()->json($result->first());
     }
 
-    public function getTruck(Carbon $currentDay, $info)
+    public function getTruck(Carbon $currentDay, $info, $id)
     {
         return Truck::select('trucks.id', 'license_plate', 'rfid', 'company', 'date', 'eta', 'ata', 'atd', 'number AS bay_number')
             ->join('schedules', 'trucks.id', '=', 'schedules.truck_id')
             ->join('bays', 'schedules.bay_id', '=', 'bays.id')
-            ->where([['date', $currentDay->toDateString()], ['license_plate', $info], ['schedule_status_id', 1]])
-            ->orWhere([['date', $currentDay->toDateString()], ['rfid', $info], ['schedule_status_id', 1]])
+            ->where([['date', $currentDay->toDateString()], ['license_plate', $info], ['schedule_status_id', $id]])
+            ->orWhere([['date', $currentDay->toDateString()], ['rfid', $info], ['schedule_status_id', $id]])
             ->get();
     }
 

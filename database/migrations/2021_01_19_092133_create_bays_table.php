@@ -27,18 +27,22 @@ class CreateBaysTable extends Migration
             [
                 [
                     'number' => 1,
+                    'bay_status_id' => 2,
                     'created_at' => now()
                 ],
                 [
                     'number' => 2,
+                    'bay_status_id' => 1,
                     'created_at' => now()
                 ],
                 [
                     'number' => 3,
+                    'bay_status_id' => 1,
                     'created_at' => now()
                 ],
                 [
                     'number' => 4,
+                    'bay_status_id' => 2,
                     'created_at' => now()
                 ],
             ]

@@ -37,8 +37,14 @@ class CreateTrucksTable extends Migration
                 ],
                 [
                     'license_plate' => '1KHU915',
-                    'rfid' => 'xz423-qwek8-sdfgh',
+                    'rfid' => '541651320',
                     'company' => 'Renard SNC',
+                    'created_at' => now()
+                ],
+                [
+                    'license_plate' => '1BGK912',
+                    'rfid' => '8416351320',
+                    'company' => 'Dubois',
                     'created_at' => now()
                 ],
             ]
