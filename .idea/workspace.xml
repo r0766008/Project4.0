@@ -191,7 +191,7 @@
       <workItem from="1611214409935" duration="13802000" />
       <workItem from="1611560868249" duration="8705000" />
       <workItem from="1611749858222" duration="275000" />
-      <workItem from="1611818992130" duration="2412000" />
+      <workItem from="1611818992130" duration="3719000" />
     </task>
     <servers />
   </component>
@@ -215,6 +215,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611568065334" />
+    <state x="779" y="210" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1611822677919">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="779" y="210" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611822677919" />
     <state x="721" y="243" key="NewPhpClassDialog" timestamp="1611561379117">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -223,5 +227,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611220994598" />
+    <state x="775" y="454" key="ReplaceDuplicatesPrompt" timestamp="1611822680548">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="775" y="454" key="ReplaceDuplicatesPrompt/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611822680548" />
   </component>
 </project>
