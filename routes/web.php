@@ -19,11 +19,17 @@ use App\Http\Controllers\User\ScheduleController as UserScheduleController;
 Auth::routes();
 Route::view('/', 'home');
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+    Route::redirect('/', 'admin/bays');
     Route::resource('bays', BayController::class);
     Route::resource('trucks', TruckController::class);
     Route::resource('schedules', AdminScheduleController::class);
 });
-Route::middleware(['auth'])->prefix('user')->group(function () {
+Route::middleware(['auth', 'trucker'])->prefix('user')->group(function () {
+    Route::redirect('/', 'user/schedules');
     Route::resource('schedules', UserScheduleController::class);
+});
+Route::middleware(['auth', 'logisticemployee'])->prefix('logistics')->group(function () {
+    Route::redirect('/', 'logistics/bays');
+    Route::resource('bays', UserScheduleController::class);
 });
 

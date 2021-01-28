@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class Admin
+class Trucker
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,9 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->role_id == 2) {
+        if (auth()->user()->role_id == 1) {
             return $next($request);
         }
-        return abort(403, 'Only administrators can access this page');
+        return abort(403, 'Only truckers can access this page');
     }
 }

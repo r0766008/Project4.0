@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Truck;
+use App\Models\UserTruck;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -62,12 +63,14 @@ class RegisterController extends Controller
             if ($id->count() == 0) {
                 $validator->errors()->add('license_plate', 'This license plate is non-existent in our database.');
             } else {
+                /*
                 $users = User::all();
                 foreach ($users as $user) {
                     if ($user->truck_id == $id[0]->id) {
                         $validator->errors()->add('license_plate', 'This license plate is already registered.');
                     }
                 }
+                */
             }
         });
 
@@ -82,13 +85,20 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $id = Truck::where('license_plate', $data['license_plate'])->get();
+        $truck = Truck::where('license_plate', $data['license_plate'])->get();
 
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
-            'truck_id' => $id[0]->id,
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        UserTruck::create([
+            'user_id' => $user->id,
+            'truck_id' => $truck[0]->id,
+            'created_at' => now()
+        ]);
+
+        return $user;
     }
 }

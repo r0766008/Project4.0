@@ -9,13 +9,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>
-                @auth
-                    @if(!auth()->user()->admin)
-                        <li class="nav-item">
-                            <a class="nav-link" href="/user/schedules">My Schedules</a>
-                        </li>
-                    @endif
-                @endauth
             </ul>
             {{--  Auth navigation  --}}
             <ul class="navbar-nav ml-auto">
@@ -33,13 +26,19 @@
                             {{ auth()->user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            @if(auth()->user()->admin)
+                            @if(auth()->user()->role_id == 1)
+                                <a class="dropdown-item" href="/user/trucks"><i class="fas fa-user-cog"></i>My Trucks</a>
+                                <a class="dropdown-item" href="/user/schedules"><i class="fas fa-user-cog"></i>My Schedules</a>
+                            @endif
+                            @if(auth()->user()->role_id == 2)
                                 <a class="dropdown-item" href="/admin/bays"><i class="fas fa-user-cog"></i>Bays</a>
                                 <a class="dropdown-item" href="/admin/trucks"><i class="fas fa-key"></i>Trucks</a>
                                 <a class="dropdown-item" href="/admin/schedules"><i class="fas fa-box-open"></i>Schedule</a>
+                                <a class="dropdown-item" href="/admin/users"><i class="fas fa-box-open"></i>Users</a>
                             @endif
-                            @if(!auth()->user()->admin)
-                                <a class="dropdown-item" href="/user/schedules"><i class="fas fa-user-cog"></i>My Schedules</a>
+                            @if(auth()->user()->role_id == 3)
+                                <a class="dropdown-item" href="/logistics/bays"><i class="fas fa-user-cog"></i>My Bays</a>
+                                <a class="dropdown-item" href="/logistics/schedule"><i class="fas fa-user-cog"></i>My Schedule</a>
                             @endif
                             <div class="dropdown-divider"></div>
                             <div>
