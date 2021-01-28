@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Truck;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -29,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -49,11 +50,28 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        $validator = Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'license_plate' => ['required', 'string'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+
+        $validator->after(function($validator) {
+            $id = Truck::where('license_plate', request()->license_plate)->get();
+            if ($id->count() == 0) {
+                $validator->errors()->add('license_plate', 'This license plate is non-existent in our database.');
+            } else {
+                $users = User::all();
+                foreach ($users as $user) {
+                    if ($user->truck_id == $id[0]->id) {
+                        $validator->errors()->add('license_plate', 'This license plate is already registered.');
+                    }
+                }
+            }
+        });
+
+        return $validator;
     }
 
     /**
@@ -64,8 +82,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $id = Truck::where('license_plate', $data['license_plate'])->get();
+
         return User::create([
             'name' => $data['name'],
+            'truck_id' => $id[0]->id,
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

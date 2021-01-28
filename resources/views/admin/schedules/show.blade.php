@@ -30,13 +30,13 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>ATA:</strong>
+                <strong>Arrival:</strong>
                 {{ $schedule->ata }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>ATD:</strong>
+                <strong>Departure:</strong>
                 {{ $schedule->atd }}
             </div>
         </div>

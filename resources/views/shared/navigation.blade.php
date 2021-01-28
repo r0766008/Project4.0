@@ -9,12 +9,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>
+                @auth
+                    @if(!auth()->user()->admin)
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/schedules">My Schedules</a>
+                        </li>
+                    @endif
+                @endauth
             </ul>
             {{--  Auth navigation  --}}
             <ul class="navbar-nav ml-auto">
                 @guest
                     <li class="nav-item">
                         <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register"><i class="fas fa-sign-in-alt"></i>Register</a>
                     </li>
                 @endguest
                 @auth
@@ -23,9 +33,14 @@
                             {{ auth()->user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/bays"><i class="fas fa-user-cog"></i>Bays</a>
-                            <a class="dropdown-item" href="/trucks"><i class="fas fa-key"></i>Trucks</a>
-                            <a class="dropdown-item" href="/schedules"><i class="fas fa-box-open"></i>Schedule</a>
+                            @if(auth()->user()->admin)
+                                <a class="dropdown-item" href="/admin/bays"><i class="fas fa-user-cog"></i>Bays</a>
+                                <a class="dropdown-item" href="/admin/trucks"><i class="fas fa-key"></i>Trucks</a>
+                                <a class="dropdown-item" href="/admin/schedules"><i class="fas fa-box-open"></i>Schedule</a>
+                            @endif
+                            @if(!auth()->user()->admin)
+                                <a class="dropdown-item" href="/user/schedules"><i class="fas fa-user-cog"></i>My Schedules</a>
+                            @endif
                             <div class="dropdown-divider"></div>
                             <div>
                                 <a class="dropdown-item" href="{{ route('logout') }}"

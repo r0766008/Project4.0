@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Cruds;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\ScheduleStatus;
@@ -20,7 +20,7 @@ class ScheduleController extends Controller
     {
         $schedules = Schedule::with('truck')->with('bay')->with('status')->latest()->paginate(5);
 
-        return view('schedules.index', compact('schedules'))
+        return view('admin.schedules.index', compact('schedules'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -33,7 +33,7 @@ class ScheduleController extends Controller
     {
         $trucks = Truck::get();
         $bays = Bay::get();
-        return view('schedules.create', compact('trucks', 'bays'));
+        return view('admin.schedules.create', compact('trucks', 'bays'));
     }
 
     /**
@@ -52,7 +52,7 @@ class ScheduleController extends Controller
 
         Schedule::create($request->all());
 
-        return redirect()->route('schedules.index')
+        return redirect()->route('admin.schedules.index')
             ->with('success', 'Schedule has successfully been created.');
     }
 
@@ -65,7 +65,7 @@ class ScheduleController extends Controller
     public function show($id)
     {
         $schedule = Schedule::with('truck')->with('bay')->with('status')->findOrFail($id);
-        return view('schedules.show', compact('schedule'));
+        return view('admin.schedules.show', compact('schedule'));
     }
 
     /**
@@ -79,7 +79,7 @@ class ScheduleController extends Controller
         $trucks = Truck::get();
         $bays = Bay::get();
         $statuses = ScheduleStatus::get();
-        return view('schedules.edit', compact('schedule', 'trucks', 'bays', 'statuses'));
+        return view('admin.schedules.edit', compact('schedule', 'trucks', 'bays', 'statuses'));
     }
 
     /**
@@ -98,7 +98,7 @@ class ScheduleController extends Controller
         ]);
         $schedule->update($request->all());
 
-        return redirect()->route('schedules.index')
+        return redirect()->route('admin.schedules.index')
             ->with('success', 'Schedule has successfully been updated.');
     }
 
@@ -112,7 +112,7 @@ class ScheduleController extends Controller
     {
         $schedule->delete();
 
-        return redirect()->route('schedules.index')
+        return redirect()->route('admin.schedules.index')
             ->with('success', 'Schedule has successfully been deleted.');
     }
 }

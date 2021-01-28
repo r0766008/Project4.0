@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Apis;
 
+use App\Http\Controllers\Controller;
 use App\Models\Bay;
 use App\Models\Schedule;
 use Carbon\Carbon;

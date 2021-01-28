@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Cruds;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Bay;
@@ -18,7 +18,7 @@ class BayController extends Controller
     {
         $bays = Bay::with('status')->paginate(5);
 
-        return view('bays.index', compact('bays'))
+        return view('admin.bays.index', compact('bays'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -29,7 +29,7 @@ class BayController extends Controller
      */
     public function create()
     {
-        return view('bays.create');
+        return view('admin.bays.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class BayController extends Controller
 
         Bay::create($request->all());
 
-        return redirect()->route('bays.index')
+        return redirect()->route('admin.bays.index')
             ->with('success', 'Bay has successfully been created.');
     }
 
@@ -59,7 +59,7 @@ class BayController extends Controller
     public function show($id)
     {
         $bay = Bay::with('status')->findOrFail($id);
-        return view('bays.show', compact('bay'));
+        return view('admin.bays.show', compact('bay'));
     }
 
     /**
@@ -71,7 +71,7 @@ class BayController extends Controller
     public function edit(Bay $bay)
     {
         $statuses = BayStatus::get();
-        return view('bays.edit', compact('bay', 'statuses'));
+        return view('admin.bays.edit', compact('bay', 'statuses'));
     }
 
     /**
@@ -88,7 +88,7 @@ class BayController extends Controller
         ]);
         $bay->update($request->all());
 
-        return redirect()->route('bays.index')
+        return redirect()->route('admin.bays.index')
             ->with('success', 'Bay has successfully been updated.');
     }
 
@@ -102,7 +102,7 @@ class BayController extends Controller
     {
         $bay->delete();
 
-        return redirect()->route('bays.index')
+        return redirect()->route('admin.bays.index')
             ->with('success', 'Bay has successfully been deleted.');
     }
 }

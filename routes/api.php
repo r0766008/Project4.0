@@ -2,10 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TruckController;
-use App\Http\Controllers\BayStatusController;
-use App\Http\Controllers\BayController;
-use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\Apis\TruckController;
+use App\Http\Controllers\Apis\BayStatusController;
+use App\Http\Controllers\Apis\BayController;
+use App\Http\Controllers\Apis\ScheduleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,11 +27,6 @@ Route::get('truck/departure/{info}', [TruckController::class, 'registerTruckDepa
 Route::post('trucks', [TruckController::class, 'store']);
 Route::put('trucks/{truck}', [TruckController::class, 'update']);
 Route::delete('trucks/{truck}', [TruckController::class, 'delete']);
-
-Route::get('baystatuses', [BayStatusController::class, 'index']);
-Route::post('baystatuses', [BayStatusController::class, 'store']);
-Route::put('baystatuses/{baystatus}', [BayStatusController::class, 'update']);
-Route::delete('baystatuses/{baystatus}', [BayStatusController::class, 'delete']);
 
 Route::get('bays', [BayController::class, 'index']);
 Route::post('bays', [BayController::class, 'store']);

@@ -46,13 +46,13 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>ATA:</strong>
+                    <strong>Arrival:</strong>
                     <input type="time" name="ata" value="{{ $schedule->ata }}" class="form-control" placeholder="ATA">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>ATD:</strong>
+                    <strong>Departure:</strong>
                     <input type="time" name="atd" value="{{ $schedule->atd }}" class="form-control" placeholder="ATD">
                 </div>
             </div>

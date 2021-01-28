@@ -20,9 +20,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/user/schedules/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_092123_create_trucks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092123_create_trucks_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_102539_create_schedules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102539_create_schedules_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BayStatusController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Cruds/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Cruds/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Cruds/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TruckController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/TruckController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092134_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_092133_create_bays_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092133_create_bays_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bays/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bays/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bays/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bays/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bays/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bays/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bays/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bays/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedules/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedules/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedules/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedules/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trucks/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/trucks/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trucks/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/trucks/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trucks/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/trucks/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trucks/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/trucks/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,19 +188,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/schedules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/user/schedules" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project\resources\views\user\schedules" />
+      <recent name="C:\xampp\htdocs\project\resources\views\schedules" />
+      <recent name="C:\xampp\htdocs\project\resources\views\trucks" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\project\app\Http\Controllers\Apis" />
       <recent name="C:\xampp\htdocs\project\resources\views\pagination" />
       <recent name="C:\xampp\htdocs\project\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\project\app\Http\Controllers\API" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\project\resources\views\schedules" />
-      <recent name="C:\xampp\htdocs\project\resources\views\trucks" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,7 +226,7 @@
       <workItem from="1611214409935" duration="13802000" />
       <workItem from="1611560868249" duration="8705000" />
       <workItem from="1611749858222" duration="275000" />
-      <workItem from="1611818992130" duration="5450000" />
+      <workItem from="1611818992130" duration="13992000" />
     </task>
     <servers />
   </component>
@@ -211,18 +246,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611568065334">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611836381393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611568065334" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611836381393" />
     <state x="779" y="210" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1611822677919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="779" y="210" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611822677919" />
-    <state x="721" y="243" key="NewPhpClassDialog" timestamp="1611561379117">
+    <state x="721" y="243" key="NewPhpClassDialog" timestamp="1611834558876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="721" y="243" key="NewPhpClassDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611561379117" />
+    <state x="721" y="243" key="NewPhpClassDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611834558876" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1611220994598">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

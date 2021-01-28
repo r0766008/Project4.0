@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Cruds;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Truck;
@@ -17,7 +17,7 @@ class TruckController extends Controller
     {
         $trucks = Truck::latest()->paginate(5);
 
-        return view('trucks.index', compact('trucks'))
+        return view('admin.trucks.index', compact('trucks'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -28,7 +28,7 @@ class TruckController extends Controller
      */
     public function create()
     {
-        return view('trucks.create');
+        return view('admin.trucks.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class TruckController extends Controller
 
         Truck::create($request->all());
 
-        return redirect()->route('trucks.index')
+        return redirect()->route('admin.trucks.index')
             ->with('success', 'Truck has successfully been created.');
     }
 
@@ -59,7 +59,7 @@ class TruckController extends Controller
      */
     public function show(Truck $truck)
     {
-        return view('trucks.show', compact('truck'));
+        return view('admin.trucks.show', compact('truck'));
     }
 
     /**
@@ -70,7 +70,7 @@ class TruckController extends Controller
      */
     public function edit(Truck $truck)
     {
-        return view('trucks.edit', compact('truck'));
+        return view('admin.trucks.edit', compact('truck'));
     }
 
     /**
@@ -89,7 +89,7 @@ class TruckController extends Controller
         ]);
         $truck->update($request->all());
 
-        return redirect()->route('trucks.index')
+        return redirect()->route('admin.trucks.index')
             ->with('success', 'Truck has successfully been updated.');
     }
 
@@ -103,7 +103,7 @@ class TruckController extends Controller
     {
         $truck->delete();
 
-        return redirect()->route('trucks.index')
+        return redirect()->route('admin.trucks.index')
             ->with('success', 'Truck has successfully been deleted.');
     }
 }
