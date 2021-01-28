@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TruckController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_092123_create_trucks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092123_create_trucks_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_092133_create_bays_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092133_create_bays_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_102539_create_schedules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102539_create_schedules_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +191,7 @@
       <workItem from="1611214409935" duration="13802000" />
       <workItem from="1611560868249" duration="8705000" />
       <workItem from="1611749858222" duration="275000" />
-      <workItem from="1611818992130" duration="5035000" />
+      <workItem from="1611818992130" duration="5450000" />
     </task>
     <servers />
   </component>

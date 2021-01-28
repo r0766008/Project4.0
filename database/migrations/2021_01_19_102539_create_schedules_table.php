@@ -75,11 +75,11 @@ class CreateSchedulesTable extends Migration
                 [
                     'date' => \Carbon\Carbon::now(),
                     'eta' => '09:00',
-                    'ata' => '09:05',
+                    'ata' => null,
                     'atd' => null,
                     'truck_id' => 1,
                     'bay_id' => 1,
-                    'schedule_status_id' => 2,
+                    'schedule_status_id' => 1,
                     'created_at' => now()
                 ],
                 [
@@ -105,11 +105,11 @@ class CreateSchedulesTable extends Migration
                 [
                     'date' => \Carbon\Carbon::now(),
                     'eta' => '09:00',
-                    'ata' => '09:02',
+                    'ata' => null,
                     'atd' => null,
                     'truck_id' => 4,
                     'bay_id' => 4,
-                    'schedule_status_id' => 2,
+                    'schedule_status_id' => 1,
                     'created_at' => now()
                 ],
             ]
