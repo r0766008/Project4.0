@@ -1,12 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\UserController;
+
 use App\Http\Controllers\Admin\TruckController as AdminTruckController;
 use App\Http\Controllers\Admin\BayController as AdminBayController;
 use App\Http\Controllers\Admin\ScheduleController as AdminScheduleController;
+use App\Http\Controllers\Admin\UserController;
+
+use App\Http\Controllers\LogisticsEmployee\TruckController as LogisticsTruckController;
+use App\Http\Controllers\LogisticsEmployee\BayController as LogisticsBayController;
+use App\Http\Controllers\LogisticsEmployee\ScheduleController as LogisticsScheduleController;
+
 use App\Http\Controllers\User\ScheduleController as UserScheduleController;
 use App\Http\Controllers\User\TruckController as UserTruckController;
+
 use App\Http\Controllers\LoadingEmployee\BayController as LoadingBayController;
 use App\Http\Controllers\LoadingEmployee\ScheduleController as LoadingScheduleController;
 
@@ -60,13 +67,42 @@ Route::middleware(['auth', 'trucker'])->prefix('user')->group(function () {
 });
 Route::middleware(['auth', 'logisticemployee'])->prefix('logistics')->group(function () {
     Route::redirect('/', 'logistics/bays');
-    Route::resource('bays', AdminBayController::class);
-    Route::resource('trucks', AdminTruckController::class);
-    Route::resource('schedules', AdminScheduleController::class);
+    Route::resource('bays', LogisticsBayController::class)->names([
+        'index' => 'logisticsemployee.bays.index',
+        'create' => 'logisticsemployee.bays.create',
+        'show' => 'logisticsemployee.bays.show',
+        'edit' => 'logisticsemployee.bays.edit',
+        'store' => 'logisticsemployee.bays.store',
+        'update' => 'logisticsemployee.bays.update',
+        'destroy' => 'logisticsemployee.bays.destroy'
+    ]);
+    Route::resource('trucks', LogisticsTruckController::class)->names([
+        'index' => 'logisticsemployee.trucks.index',
+        'create' => 'logisticsemployee.trucks.create',
+        'show' => 'logisticsemployee.trucks.show',
+        'edit' => 'logisticsemployee.trucks.edit',
+        'store' => 'logisticsemployee.trucks.store',
+        'update' => 'logisticsemployee.trucks.update',
+        'destroy' => 'logisticsemployee.trucks.destroy'
+    ]);
+    Route::resource('schedules', LogisticsScheduleController::class)->names([
+        'index' => 'logisticsemployee.schedules.index',
+        'create' => 'logisticsemployee.schedules.create',
+        'show' => 'logisticsemployee.schedules.show',
+        'edit' => 'logisticsemployee.schedules.edit',
+        'store' => 'logisticsemployee.schedules.store',
+        'update' => 'logisticsemployee.schedules.update',
+        'destroy' => 'logisticsemployee.schedules.destroy'
+    ]);
 });
 Route::middleware(['auth', 'loadingemployee'])->prefix('loading')->group(function () {
     Route::redirect('/', 'loading/bays');
-    Route::resource('bays', LoadingBayController::class);
+    Route::resource('bays', LoadingBayController::class)->names([
+        'index' => 'loading.bays.index',
+        'create' => 'loading.bays.create',
+        'store' => 'loading.bays.store',
+        'destroy' => 'loading.bays.destroy'
+    ]);
     Route::resource('schedule', LoadingScheduleController::class);
 });
 

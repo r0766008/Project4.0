@@ -39,7 +39,7 @@
                     <td>{{ $schedule->eta }}</td>
                     <td>{{ $schedule->ata }}</td>
                     <td>{{ $schedule->atd }}</td>
-                    <td>{{ $schedule->truck->license_plate }}</td>
+                    <td>{{ $schedule->truck->truck->license_plate }}</td>
                     <td>{{ $schedule->bay->number }}</td>
                     <td>{{ $schedule->status->name }}</td>
                 </tr>

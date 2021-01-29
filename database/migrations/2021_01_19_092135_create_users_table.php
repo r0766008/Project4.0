@@ -46,6 +46,22 @@ class CreateUsersTable extends Migration
                     'email_verified_at' => now()
                 ],
                 [
+                    'name' => 'Loading Employee1',
+                    'email' => 'loading1@employee.com',
+                    'role_id' => 4,
+                    'password' => \Illuminate\Support\Facades\Hash::make('test1234'),
+                    'created_at' => now(),
+                    'email_verified_at' => now()
+                ],
+                [
+                    'name' => 'Loading Employee2',
+                    'email' => 'loading2@employee.com',
+                    'role_id' => 4,
+                    'password' => \Illuminate\Support\Facades\Hash::make('test1234'),
+                    'created_at' => now(),
+                    'email_verified_at' => now()
+                ],
+                [
                     'name' => 'Trucker1',
                     'email' => 'trucker1@trucker.com',
                     'role_id' => 1,

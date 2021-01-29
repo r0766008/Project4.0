@@ -1,15 +1,15 @@
 @extends('layouts.template')
 
-@section('title', 'My Bays')
+@section('title', 'Bays')
 
 @section('main')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>My Bays</h2>
+                <h2>Bays</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('loading.bays.create') }}">Add a bay<i class="fas fa-plus-circle"></i></a>
+                <a class="btn btn-success" href="{{ route('logisticsemployee.bays.create') }}">Create a bay<i class="fas fa-plus-circle"></i></a>
             </div>
             <br><br>
         </div>
@@ -27,17 +27,21 @@
                     <th scope="col">#</th>
                     <th scope="col">Number</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Date Created</th>
                     <th scope="col" width="180px">Action</th>
                 </tr>
             </thead>
             <tbody>
             @foreach ($bays as $bay)
-                <tr>
+                <tr data-href="{{ route('logisticsemployee.bays.show', $bay->id) }}" onclick="window.location.href = this.getAttribute('data-href');" style="cursor: pointer;">
                     <th scope="row">{{ ++$i }}</th>
-                    <td>{{ $bay->bay->number }}</td>
-                    <td>{{ $bay->bay->status->name }}</td>
+                    <td>{{ $bay->number }}</td>
+                    <td>{{ $bay->status->name }}</td>
+                    <td>{{ date_format($bay->created_at, 'jS M Y') }}</td>
                     <td>
-                        <form action="{{ route('loading.bays.destroy', $bay->id) }}" method="POST">
+                        <form action="{{ route('logisticsemployee.bays.destroy', $bay->id) }}" method="POST">
+                            <a class="btn btn-primary" href="{{ route('logisticsemployee.bays.edit', $bay->id) }}"><span class="material-icons">edit</span></a>
+
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">

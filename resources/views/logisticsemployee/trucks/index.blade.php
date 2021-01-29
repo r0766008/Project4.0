@@ -1,15 +1,15 @@
 @extends('layouts.template')
 
-@section('title', 'My Bays')
+@section('title', 'Trucks')
 
 @section('main')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>My Bays</h2>
+                <h2>Trucks</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('loading.bays.create') }}">Add a bay<i class="fas fa-plus-circle"></i></a>
+                <a class="btn btn-success" href="{{ route('logisticsemployee.trucks.create') }}">Create a truck<i class="fas fa-plus-circle"></i></a>
             </div>
             <br><br>
         </div>
@@ -25,19 +25,25 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Number</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">License plate</th>
+                    <th scope="col">RFID</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Date Created</th>
                     <th scope="col" width="180px">Action</th>
                 </tr>
             </thead>
             <tbody>
-            @foreach ($bays as $bay)
-                <tr>
+            @foreach ($trucks as $truck)
+                <tr data-href="{{ route('logisticsemployee.trucks.show', $truck->id) }}" onclick="window.location.href = this.getAttribute('data-href');" style="cursor: pointer;">
                     <th scope="row">{{ ++$i }}</th>
-                    <td>{{ $bay->bay->number }}</td>
-                    <td>{{ $bay->bay->status->name }}</td>
+                    <td>{{ $truck->license_plate }}</td>
+                    <td>{{ $truck->rfid }}</td>
+                    <td>{{ $truck->company }}</td>
+                    <td>{{ date_format($truck->created_at, 'jS M Y') }}</td>
                     <td>
-                        <form action="{{ route('loading.bays.destroy', $bay->id) }}" method="POST">
+                        <form action="{{ route('logisticsemployee.trucks.destroy', $truck->id) }}" method="POST">
+                            <a class="btn btn-primary" href="{{ route('logisticsemployee.trucks.edit', $truck->id) }}"><span class="material-icons">edit</span></a>
+
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">
@@ -51,6 +57,6 @@
         </table>
     </div>
     <div class="d-flex justify-content-center">
-        {{ $bays->links('pagination.default') }}
+        {{ $trucks->links('pagination.default') }}
     </div>
 @endsection

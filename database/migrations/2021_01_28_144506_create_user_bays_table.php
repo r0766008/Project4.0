@@ -27,18 +27,23 @@ class CreateUserBaysTable extends Migration
         DB::table('user_bays')->insert(
             [
                 [
-                    'user_id' => 2,
+                    'user_id' => 3,
                     'bay_id' => 1,
                     'created_at' => now()
                 ],
                 [
-                    'user_id' => 2,
+                    'user_id' => 3,
                     'bay_id' => 2,
                     'created_at' => now()
                 ],
                 [
-                    'user_id' => 2,
+                    'user_id' => 4,
                     'bay_id' => 3,
+                    'created_at' => now()
+                ],
+                [
+                    'user_id' => 4,
+                    'bay_id' => 4,
                     'created_at' => now()
                 ]
             ]
