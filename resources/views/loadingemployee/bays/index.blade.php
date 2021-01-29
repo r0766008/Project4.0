@@ -1,15 +1,12 @@
 @extends('layouts.template')
 
-@section('title', 'Schedules')
+@section('title', 'My Schedules')
 
 @section('main')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Schedules</h2>
-            </div>
-            <div class="float-right">
-                <a class="btn btn-success" href="{{ route('admin.schedules.create') }}">Create a schedule<i class="fas fa-plus-circle"></i></a>
+                <h2>My Schedules</h2>
             </div>
             <br><br>
         </div>
@@ -32,33 +29,19 @@
                     <th scope="col">Truck</th>
                     <th scope="col">Bay</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Date Created</th>
-                    <th scope="col" width="180px">Action</th>
                 </tr>
             </thead>
             <tbody>
             @foreach ($schedules as $schedule)
-                <tr data-href="{{ route('admin.schedules.show', $schedule->id) }}" onclick="window.location.href = this.getAttribute('data-href');" style="cursor: pointer;">
+                <tr>
                     <th scope="row">{{ ++$i }}</th>
                     <td>{{ $schedule->date }}</td>
                     <td>{{ $schedule->eta }}</td>
                     <td>{{ $schedule->ata }}</td>
                     <td>{{ $schedule->atd }}</td>
-                    <td>{{ $schedule->truck->truck->license_plate }}</td>
+                    <td>{{ $schedule->truck->license_plate }}</td>
                     <td>{{ $schedule->bay->number }}</td>
                     <td>{{ $schedule->status->name }}</td>
-                    <td>{{ date_format($schedule->created_at, 'jS M Y') }}</td>
-                    <td>
-                        <form action="{{ route('admin.schedules.destroy', $schedule->id) }}" method="POST">
-                            <a class="btn btn-primary" href="{{ route('admin.schedules.edit', $schedule->id) }}"><span class="material-icons">edit</span></a>
-
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">
-                                <span class="material-icons">delete</span>
-                            </button>
-                        </form>
-                    </td>
                 </tr>
             @endforeach
             </tbody>

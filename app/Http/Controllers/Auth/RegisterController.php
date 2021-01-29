@@ -59,18 +59,9 @@ class RegisterController extends Controller
         ]);
 
         $validator->after(function($validator) {
-            $id = Truck::where('license_plate', request()->license_plate)->get();
-            if ($id->count() == 0) {
+            $truck = Truck::where('license_plate', request()->license_plate)->get();
+            if ($truck->count() == 0) {
                 $validator->errors()->add('license_plate', 'This license plate is non-existent in our database.');
-            } else {
-                /*
-                $users = User::all();
-                foreach ($users as $user) {
-                    if ($user->truck_id == $id[0]->id) {
-                        $validator->errors()->add('license_plate', 'This license plate is already registered.');
-                    }
-                }
-                */
             }
         });
 

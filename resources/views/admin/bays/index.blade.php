@@ -9,7 +9,7 @@
                 <h2>Bays</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('bays.create') }}">Create a bay<i class="fas fa-plus-circle"></i></a>
+                <a class="btn btn-success" href="{{ route('admin.bays.create') }}">Create a bay<i class="fas fa-plus-circle"></i></a>
             </div>
             <br><br>
         </div>
@@ -33,14 +33,14 @@
             </thead>
             <tbody>
             @foreach ($bays as $bay)
-                <tr data-href="{{ route('bays.show', $bay->id) }}" onclick="window.location.href = this.getAttribute('data-href');" style="cursor: pointer;">
+                <tr data-href="{{ route('admin.bays.show', $bay->id) }}" onclick="window.location.href = this.getAttribute('data-href');" style="cursor: pointer;">
                     <th scope="row">{{ ++$i }}</th>
                     <td>{{ $bay->number }}</td>
                     <td>{{ $bay->status->name }}</td>
                     <td>{{ date_format($bay->created_at, 'jS M Y') }}</td>
                     <td>
-                        <form action="{{ route('bays.destroy', $bay->id) }}" method="POST">
-                            <a class="btn btn-primary" href="{{ route('bays.edit', $bay->id) }}"><span class="material-icons">edit</span></a>
+                        <form action="{{ route('admin.bays.destroy', $bay->id) }}" method="POST">
+                            <a class="btn btn-primary" href="{{ route('admin.bays.edit', $bay->id) }}"><span class="material-icons">edit</span></a>
 
                             @csrf
                             @method('DELETE')

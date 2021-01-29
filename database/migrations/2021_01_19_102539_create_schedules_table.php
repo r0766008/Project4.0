@@ -19,13 +19,13 @@ class CreateSchedulesTable extends Migration
             $table->time('eta')->nullable();
             $table->time('ata')->nullable();
             $table->time('atd')->nullable();
-            $table->foreignId('truck_id');
+            $table->foreignId('user_truck_id');
             $table->foreignId('bay_id');
             $table->foreignId('schedule_status_id')->default(1);
             $table->timestamps();
 
             // Foreign key relation
-            $table->foreign('truck_id')->references('id')->on('trucks')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('user_truck_id')->references('id')->on('user_trucks')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('bay_id')->references('id')->on('bays')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('schedule_status_id')->references('id')->on('schedule_statuses')->onDelete('cascade')->onUpdate('cascade');
         });
@@ -37,7 +37,7 @@ class CreateSchedulesTable extends Migration
                     'eta' => '08:00',
                     'ata' => '08:03',
                     'atd' => '08:47',
-                    'truck_id' => 1,
+                    'user_truck_id' => 1,
                     'bay_id' => 1,
                     'schedule_status_id' => 3,
                     'created_at' => now()
@@ -47,7 +47,7 @@ class CreateSchedulesTable extends Migration
                     'eta' => '08:00',
                     'ata' => '08:01',
                     'atd' => '08:42',
-                    'truck_id' => 2,
+                    'user_truck_id' => 2,
                     'bay_id' => 2,
                     'schedule_status_id' => 3,
                     'created_at' => now()
@@ -57,7 +57,7 @@ class CreateSchedulesTable extends Migration
                     'eta' => '08:00',
                     'ata' => '07:58',
                     'atd' => '08:53',
-                    'truck_id' => 3,
+                    'user_truck_id' => 3,
                     'bay_id' => 3,
                     'schedule_status_id' => 3,
                     'created_at' => now()
@@ -67,7 +67,7 @@ class CreateSchedulesTable extends Migration
                     'eta' => '08:00',
                     'ata' => '08:08',
                     'atd' => '08:58',
-                    'truck_id' => 4,
+                    'user_truck_id' => 4,
                     'bay_id' => 4,
                     'schedule_status_id' => 3,
                     'created_at' => now()
@@ -77,7 +77,7 @@ class CreateSchedulesTable extends Migration
                     'eta' => '09:00',
                     'ata' => null,
                     'atd' => null,
-                    'truck_id' => 1,
+                    'user_truck_id' => 1,
                     'bay_id' => 1,
                     'schedule_status_id' => 1,
                     'created_at' => now()
@@ -87,7 +87,7 @@ class CreateSchedulesTable extends Migration
                     'eta' => '09:00',
                     'ata' => null,
                     'atd' => null,
-                    'truck_id' => 2,
+                    'user_truck_id' => 2,
                     'bay_id' => 2,
                     'schedule_status_id' => 1,
                     'created_at' => now()
@@ -97,7 +97,7 @@ class CreateSchedulesTable extends Migration
                     'eta' => '09:00',
                     'ata' => null,
                     'atd' => null,
-                    'truck_id' => 3,
+                    'user_truck_id' => 3,
                     'bay_id' => 3,
                     'schedule_status_id' => 1,
                     'created_at' => now()
@@ -107,7 +107,7 @@ class CreateSchedulesTable extends Migration
                     'eta' => '09:00',
                     'ata' => null,
                     'atd' => null,
-                    'truck_id' => 4,
+                    'user_truck_id' => 4,
                     'bay_id' => 4,
                     'schedule_status_id' => 1,
                     'created_at' => now()

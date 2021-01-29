@@ -20,10 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/loadingemployee/bays/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/loadingemployee/schedule/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/trucks/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ScheduleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Schedule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Truck.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Truck.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_092134_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092134_create_roles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_092135_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092135_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_102539_create_schedules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102539_create_schedules_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_28_144346_create_user_trucks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102538_create_user_trucks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_28_144506_create_user_bays_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_28_144506_create_user_bays_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/bays/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bays/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/bays/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bays/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/bays/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bays/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/bays/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bays/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedules/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedules/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedules/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedules/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/trucks/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/trucks/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/trucks/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/trucks/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/trucks/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/trucks/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/trucks/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/trucks/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -159,15 +187,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/user/schedules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/users" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project\resources\views\admin\users" />
+      <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\bays" />
+      <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\schedule" />
+      <recent name="C:\xampp\htdocs\project\resources\views\user\trucks" />
       <recent name="C:\xampp\htdocs\project\resources\views\user\schedules" />
-      <recent name="C:\xampp\htdocs\project\resources\views\schedules" />
-      <recent name="C:\xampp\htdocs\project\resources\views\trucks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\project\resources\views\admin" />
@@ -198,7 +228,8 @@
       <workItem from="1611560868249" duration="8705000" />
       <workItem from="1611749858222" duration="275000" />
       <workItem from="1611818992130" duration="14734000" />
-      <workItem from="1611844946535" duration="2818000" />
+      <workItem from="1611844946535" duration="4178000" />
+      <workItem from="1611906770356" duration="13648000" />
     </task>
     <servers />
   </component>
@@ -218,10 +249,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611836381393">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611923280540">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611836381393" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611923280540" />
     <state x="779" y="210" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1611822677919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -238,5 +269,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="775" y="454" key="ReplaceDuplicatesPrompt/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611822680548" />
+    <state x="623" y="225" key="search.everywhere.popup" timestamp="1611848200945">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611848200945" />
   </component>
 </project>

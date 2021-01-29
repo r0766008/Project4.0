@@ -10,8 +10,8 @@ class Truck extends Model
     use HasFactory;
     protected $fillable = ['license_plate', 'rfid', 'company'];
 
-    public function schedules()
+    public function userTrucks()
     {
-        return $this->hasMany('App\Models\Schedule');
+        return $this->hasMany('App\Models\UserTruck');
     }
 }

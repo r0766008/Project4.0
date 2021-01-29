@@ -22,15 +22,19 @@ class CreateRolesTable extends Migration
         DB::table('roles')->insert(
             [
                 [
-                    'name' => 'Admin',
-                    'created_at' => now()
-                ],
-                [
                     'name' => 'Trucker',
                     'created_at' => now()
                 ],
                 [
+                    'name' => 'Admin',
+                    'created_at' => now()
+                ],
+                [
                     'name' => 'Logistic Employee',
+                    'created_at' => now()
+                ],
+                [
+                    'name' => 'Loading Employee',
                     'created_at' => now()
                 ],
             ]

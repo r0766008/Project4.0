@@ -1,15 +1,15 @@
 @extends('layouts.template')
 
-@section('title', 'Trucks')
+@section('title', 'Users')
 
 @section('main')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Trucks</h2>
+                <h2>Users</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('admin.trucks.create') }}">Create a truck<i class="fas fa-plus-circle"></i></a>
+                <a class="btn btn-success" href="{{ route('users.create') }}">Create a user<i class="fas fa-plus-circle"></i></a>
             </div>
             <br><br>
         </div>
@@ -25,24 +25,24 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">License plate</th>
-                    <th scope="col">RFID</th>
-                    <th scope="col">Company</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
                     <th scope="col">Date Created</th>
                     <th scope="col" width="180px">Action</th>
                 </tr>
             </thead>
             <tbody>
-            @foreach ($trucks as $truck)
-                <tr data-href="{{ route('admin.trucks.show', $truck->id) }}" onclick="window.location.href = this.getAttribute('data-href');" style="cursor: pointer;">
+            @foreach ($users as $user)
+                <tr data-href="{{ route('users.show', $user->id) }}" onclick="window.location.href = this.getAttribute('data-href');" style="cursor: pointer;">
                     <th scope="row">{{ ++$i }}</th>
-                    <td>{{ $truck->license_plate }}</td>
-                    <td>{{ $truck->rfid }}</td>
-                    <td>{{ $truck->company }}</td>
-                    <td>{{ date_format($truck->created_at, 'jS M Y') }}</td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->role->name }}</td>
+                    <td>{{ date_format($user->created_at, 'jS M Y') }}</td>
                     <td>
-                        <form action="{{ route('admin.trucks.destroy', $truck->id) }}" method="POST">
-                            <a class="btn btn-primary" href="{{ route('admin.trucks.edit', $truck->id) }}"><span class="material-icons">edit</span></a>
+                        <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                            <a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}"><span class="material-icons">edit</span></a>
 
                             @csrf
                             @method('DELETE')
@@ -57,6 +57,6 @@
         </table>
     </div>
     <div class="d-flex justify-content-center">
-        {{ $trucks->links('pagination.default') }}
+        {{ $users->links('pagination.default') }}
     </div>
 @endsection

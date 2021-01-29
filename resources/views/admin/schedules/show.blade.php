@@ -9,7 +9,7 @@
                 <h2>Schedule Details</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-primary" href="{{ route('schedules.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{ route('admin.schedules.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
             </div>
             <br><br>
         </div>
@@ -43,7 +43,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Truck:</strong>
-                {{ $schedule->truck->license_plate }}
+                {{ $schedule->truck->truck->license_plate }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

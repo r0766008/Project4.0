@@ -9,7 +9,7 @@
                 <h2>Add New Truck</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-primary" href="{{ route('trucks.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{ route('admin.trucks.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
             </div>
             <br><br>
         </div>
@@ -25,7 +25,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{ route('trucks.store') }}" method="POST" >
+    <form action="{{ route('admin.trucks.store') }}" method="POST" >
         @csrf
 
         <div class="row">

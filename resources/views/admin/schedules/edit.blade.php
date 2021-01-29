@@ -9,7 +9,7 @@
                 <h2>Edit Schedule</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-primary" href="{{ route('schedules.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{ route('admin.schedules.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
             </div>
             <br><br>
         </div>
@@ -26,7 +26,7 @@
         </div>
     @endif
 
-    <form action="{{ route('schedules.update', $schedule->id) }}" method="POST">
+    <form action="{{ route('admin.schedules.update', $schedule->id) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -59,9 +59,9 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Truck:</strong>
-                    <select class="form-control" name="truck_id" id="truck_id">
+                    <select class="form-control" name="user_truck_id" id="user_truck_id">
                         @foreach($trucks as $truck)
-                            <option value="{{ $truck->id }}"{{ ($schedule->truck_id ==  $truck->id ? 'selected' : '') }}>{{ $truck->license_plate . " (" . $truck->company . ")" }}</option>
+                            <option value="{{ $truck->id }}"{{ ($schedule->user_truck_id ==  $truck->id ? 'selected' : '') }}>{{ $truck->truck->license_plate . " (" . $truck->user->name . ")"}}</option>
                         @endforeach
                     </select>
                 </div>

@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\ScheduleStatus;
-use App\Models\Truck;
 use App\Models\Bay;
 use App\Models\Schedule;
+use App\Models\UserTruck;
 use Illuminate\Http\Request;
 
 class ScheduleController extends Controller
@@ -31,7 +31,7 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        $trucks = Truck::get();
+        $trucks = UserTruck::with('truck')->with('user')->get();
         $bays = Bay::get();
         return view('admin.schedules.create', compact('trucks', 'bays'));
     }
@@ -46,7 +46,7 @@ class ScheduleController extends Controller
     {
         $request->validate([
             'date' => 'required',
-            'truck_id' => 'required',
+            'user_truck_id' => 'required',
             'bay_id' => 'required'
         ]);
 
@@ -76,7 +76,7 @@ class ScheduleController extends Controller
      */
     public function edit(Schedule $schedule)
     {
-        $trucks = Truck::get();
+        $trucks = UserTruck::with('truck')->with('user')->get();
         $bays = Bay::get();
         $statuses = ScheduleStatus::get();
         return view('admin.schedules.edit', compact('schedule', 'trucks', 'bays', 'statuses'));
@@ -93,7 +93,7 @@ class ScheduleController extends Controller
     {
         $request->validate([
             'date' => 'required',
-            'truck_id' => 'required',
+            'user_truck_id' => 'required',
             'bay_id' => 'required'
         ]);
         $schedule->update($request->all());

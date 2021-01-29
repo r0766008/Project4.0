@@ -37,8 +37,13 @@
                                 <a class="dropdown-item" href="/admin/users"><i class="fas fa-box-open"></i>Users</a>
                             @endif
                             @if(auth()->user()->role_id == 3)
-                                <a class="dropdown-item" href="/logistics/bays"><i class="fas fa-user-cog"></i>My Bays</a>
-                                <a class="dropdown-item" href="/logistics/schedule"><i class="fas fa-user-cog"></i>My Schedule</a>
+                                <a class="dropdown-item" href="/logistics/bays"><i class="fas fa-user-cog"></i>Bays</a>
+                                <a class="dropdown-item" href="/logistics/trucks"><i class="fas fa-key"></i>Trucks</a>
+                                <a class="dropdown-item" href="/logistics/schedules"><i class="fas fa-box-open"></i>Schedule</a>
+                            @endif
+                            @if(auth()->user()->role_id == 4)
+                                <a class="dropdown-item" href="/loading/bays"><i class="fas fa-user-cog"></i>My Bays</a>
+                                <a class="dropdown-item" href="/loading/schedule"><i class="fas fa-key"></i>My Schedule</a>
                             @endif
                             <div class="dropdown-divider"></div>
                             <div>

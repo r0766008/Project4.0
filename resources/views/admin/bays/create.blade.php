@@ -9,7 +9,7 @@
                 <h2>Add New Bay</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-primary" href="{{ route('bays.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{ route('admin.bays.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
             </div>
             <br><br>
         </div>
@@ -25,7 +25,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{ route('bays.store') }}" method="POST" >
+    <form action="{{ route('admin.bays.store') }}" method="POST" >
         @csrf
 
         <div class="row">

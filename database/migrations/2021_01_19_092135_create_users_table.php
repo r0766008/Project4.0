@@ -30,14 +30,6 @@ class CreateUsersTable extends Migration
         DB::table('users')->insert(
             [
                 [
-                    'name' => 'Trucker',
-                    'email' => 'test.test@test.com',
-                    'role_id' => 1,
-                    'password' => \Illuminate\Support\Facades\Hash::make('test1234'),
-                    'created_at' => now(),
-                    'email_verified_at' => now()
-                ],
-                [
                     'name' => 'Admin',
                     'email' => 'admin@admin.com',
                     'role_id' => 2,
@@ -52,7 +44,39 @@ class CreateUsersTable extends Migration
                     'password' => \Illuminate\Support\Facades\Hash::make('test1234'),
                     'created_at' => now(),
                     'email_verified_at' => now()
-                ]
+                ],
+                [
+                    'name' => 'Trucker1',
+                    'email' => 'trucker1@trucker.com',
+                    'role_id' => 1,
+                    'password' => \Illuminate\Support\Facades\Hash::make('test1234'),
+                    'created_at' => now(),
+                    'email_verified_at' => now()
+                ],
+                [
+                    'name' => 'Trucker2',
+                    'email' => 'trucker2@trucker.com',
+                    'role_id' => 1,
+                    'password' => \Illuminate\Support\Facades\Hash::make('test1234'),
+                    'created_at' => now(),
+                    'email_verified_at' => now()
+                ],
+                [
+                    'name' => 'Trucker3',
+                    'email' => 'trucker3@trucker.com',
+                    'role_id' => 1,
+                    'password' => \Illuminate\Support\Facades\Hash::make('test1234'),
+                    'created_at' => now(),
+                    'email_verified_at' => now()
+                ],
+                [
+                    'name' => 'Trucker4',
+                    'email' => 'trucker4@trucker.com',
+                    'role_id' => 1,
+                    'password' => \Illuminate\Support\Facades\Hash::make('test1234'),
+                    'created_at' => now(),
+                    'email_verified_at' => now()
+                ],
             ]
         );
     }

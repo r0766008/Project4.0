@@ -9,7 +9,7 @@
                 <h2>Edit Bay</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-primary" href="{{ route('bays.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{ route('admin.bays.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
             </div>
             <br><br>
         </div>
@@ -26,7 +26,7 @@
         </div>
     @endif
 
-    <form action="{{ route('bays.update', $bay->id) }}" method="POST">
+    <form action="{{ route('admin.bays.update', $bay->id) }}" method="POST">
         @csrf
         @method('PUT')
 

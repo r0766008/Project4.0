@@ -9,7 +9,7 @@
                 <h2>Truck Details</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-primary" href="{{ route('trucks.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{ route('admin.trucks.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
             </div>
             <br><br>
         </div>

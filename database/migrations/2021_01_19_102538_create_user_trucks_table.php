@@ -27,10 +27,25 @@ class CreateUserTrucksTable extends Migration
         DB::table('user_trucks')->insert(
             [
                 [
-                    'user_id' => 1,
+                    'user_id' => 3,
+                    'truck_id' => 1,
+                    'created_at' => now()
+                ],
+                [
+                    'user_id' => 4,
                     'truck_id' => 2,
                     'created_at' => now()
-                ]
+                ],
+                [
+                    'user_id' => 5,
+                    'truck_id' => 3,
+                    'created_at' => now()
+                ],
+                [
+                    'user_id' => 6,
+                    'truck_id' => 4,
+                    'created_at' => now()
+                ],
             ]
         );
     }

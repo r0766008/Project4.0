@@ -1,15 +1,15 @@
 @extends('layouts.template')
 
-@section('title', 'Edit Truck')
+@section('title', 'Edit User')
 
 @section('main')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Edit Truck</h2>
+                <h2>Edit User</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-primary" href="{{ route('admin.trucks.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{ route('users.index') }}" title="Go back">Go back<i class="fas fa-backward "></i> </a>
             </div>
             <br><br>
         </div>
@@ -26,27 +26,31 @@
         </div>
     @endif
 
-    <form action="{{ route('admin.trucks.update', $truck->id) }}" method="POST">
+    <form action="{{ route('users.update', $user->id) }}" method="POST">
         @csrf
         @method('PUT')
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>License plate:</strong>
-                    <input type="text" name="license_plate" value="{{ $truck->license_plate }}" class="form-control" placeholder="License plate">
+                    <strong>Name:</strong>
+                    <input type="text" name="name" class="form-control" placeholder="Name" value="{{ $user->name }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>RFID:</strong>
-                    <input type="text" name="rfid" value="{{ $truck->rfid }}" class="form-control" placeholder="RFID">
+                    <strong>Email:</strong>
+                    <input type="email" name="email" class="form-control" placeholder="Email" value="{{ $user->email }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Company:</strong>
-                    <input type="text" name="company" value="{{ $truck->company }}" class="form-control" placeholder="Company">
+                    <strong>Role:</strong>
+                    <select class="form-control" name="role_id" id="role_id">
+                        @foreach($roles as $role)
+                            <option value="{{ $role->id }}"{{ ($user->role_id ==  $role->id ? 'selected' : '') }}>{{ $role->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
