@@ -55,4 +55,68 @@
         </div>
 
     </form>
+
+    <br><br>
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="float-left">
+                <h2>Truck Drivers</h2>
+            </div>
+            <div class="float-right">
+                <form action="drivers/create" method="POST">
+                    @csrf
+                    <div class="row">
+                        <div class="col-xs-6" style="margin-right: 10px;">
+                            <select class="form-control" name="user_id" id="user_id">
+                                @foreach($remainingusers as $user)
+                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-xs-6">
+                            <button type="submit" class="btn btn-success">
+                                <span>Add Driver</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col" width="180px">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach ($users as $user)
+                <tr>
+                    <th scope="row">{{ ++$i }}</th>
+                    <td>{{ $user->user->name }}</td>
+                    <td>{{ $user->user->email }}</td>
+                    <td>
+                        <form action="drivers/{{ $user->user->id }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">
+                                <span class="material-icons">delete</span>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection

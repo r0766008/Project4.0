@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Truck;
+use App\Models\User;
+use App\Models\UserTruck;
 use Illuminate\Http\Request;
 
 class TruckController extends Controller
@@ -70,7 +72,11 @@ class TruckController extends Controller
      */
     public function edit(Truck $truck)
     {
-        return view('admin.trucks.edit', compact('truck'));
+        $userIds = UserTruck::where('truck_id', $truck->id)->pluck('user_id')->toArray();
+        $users = UserTruck::where('truck_id', $truck->id)->with('user')->latest()->paginate(5);
+        $remainingusers = User::whereNotIn('id', $userIds)->where('role_id', 1)->get();
+        return view('admin.trucks.edit', compact('truck', 'users', 'remainingusers'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -105,5 +111,25 @@ class TruckController extends Controller
 
         return redirect()->route('admin.trucks.index')
             ->with('success', 'Truck has successfully been deleted.');
+    }
+
+    public function addDriver($truckId, Request $request) {
+        UserTruck::create([
+            'user_id' => $request->user_id,
+            'truck_id' => $truckId,
+            'created_at' => now()
+        ]);
+
+        $truck = Truck::find($truckId);
+        return redirect()->route('admin.trucks.edit', $truck)
+            ->with('success', 'Driver has successfully been added.');
+    }
+
+    public function deleteDriver($truckId, $userId) {
+        UserTruck::where([['truck_id', $truckId], ['user_id', $userId]])->delete();
+
+        $truck = Truck::find($truckId);
+        return redirect()->route('admin.trucks.edit', $truck)
+            ->with('success', 'Driver has successfully been deleted.');
     }
 }

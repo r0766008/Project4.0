@@ -20,35 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/loadingemployee/bays/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/bays/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/bays/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/bays/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/bays/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/trucks/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/trucks/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/trucks/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/trucks/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apis/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apis/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/TruckController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoadingEmployee/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoadingEmployee/BayController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoadingEmployee/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoadingEmployee/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/TruckController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_092135_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092135_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_102538_create_user_trucks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102538_create_user_trucks_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_28_144506_create_user_bays_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_28_144506_create_user_bays_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/loadingemployee/bays/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/loadingemployee/bays/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/loadingemployee/schedule/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/loadingemployee/schedule/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/schedules/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/schedules/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/trucks/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/trucks/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TruckController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/TruckController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/trucks/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/trucks/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/logisticsemployee/trucks/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/trucks/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +202,8 @@
       <workItem from="1611749858222" duration="275000" />
       <workItem from="1611818992130" duration="14734000" />
       <workItem from="1611844946535" duration="4178000" />
-      <workItem from="1611906770356" duration="21330000" />
+      <workItem from="1611906770356" duration="22098000" />
+      <workItem from="1612164698032" duration="5372000" />
     </task>
     <servers />
   </component>
@@ -245,10 +223,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611947829840">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612167974007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611947829840" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612167974007" />
     <state x="779" y="210" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1611822677919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -277,9 +255,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="dock-window-3/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611941463873" />
-    <state x="623" y="225" key="search.everywhere.popup" timestamp="1611848200945">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612165043404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611848200945" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612165043404" />
   </component>
 </project>

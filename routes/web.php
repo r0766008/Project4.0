@@ -47,8 +47,10 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
         'edit' => 'admin.trucks.edit',
         'store' => 'admin.trucks.store',
         'update' => 'admin.trucks.update',
-        'destroy' => 'admin.trucks.destroy'
+        'destroy' => 'admin.trucks.destroy',
     ]);
+    Route::delete('trucks/{truck_id}/drivers/{user_id}', [AdminTruckController::class, 'deleteDriver']);
+    Route::post('trucks/{truck_id}/drivers/create', [AdminTruckController::class, 'addDriver']);
     Route::resource('schedules', AdminScheduleController::class)->names([
         'index' => 'admin.schedules.index',
         'create' => 'admin.schedules.create',
@@ -85,6 +87,8 @@ Route::middleware(['auth', 'logisticemployee'])->prefix('logistics')->group(func
         'update' => 'logisticsemployee.trucks.update',
         'destroy' => 'logisticsemployee.trucks.destroy'
     ]);
+    Route::delete('trucks/{truck_id}/drivers/{user_id}', [LogisticsTruckController::class, 'deleteDriver']);
+    Route::post('trucks/{truck_id}/drivers/create', [LogisticsTruckController::class, 'addDriver']);
     Route::resource('schedules', LogisticsScheduleController::class)->names([
         'index' => 'logisticsemployee.schedules.index',
         'create' => 'logisticsemployee.schedules.create',
