@@ -10,6 +10,8 @@ class BayController extends Controller
 {
     public function index()
     {
-        return Bay::all();
+        return Bay::select('bays.*', 'bay_statuses.name')
+            ->join('bay_statuses', 'bay_statuses.id', '=', 'bays.bay_status_id')
+            ->get();
     }
 }
