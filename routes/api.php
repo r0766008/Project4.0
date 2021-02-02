@@ -27,5 +27,6 @@ Route::get('truck/arrival/{info}', [TruckController::class, 'registerTruckArriva
 Route::get('truck/departure/{info}', [TruckController::class, 'registerTruckDeparture']);
 
 Route::get('bays', [BayController::class, 'index']);
+Route::get('bays/schedules', [BayController::class, 'schedules']);
 
 Route::get('schedules', [ScheduleController::class, 'index']);

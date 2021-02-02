@@ -33,7 +33,7 @@
             </thead>
             <tbody>
             @foreach ($schedules as $schedule)
-                <tr>
+                <tr data-href="{{ route('schedule.show', $schedule->id) }}" onclick="window.location.href = this.getAttribute('data-href');" style="cursor: pointer;">
                     <th scope="row">{{ ++$i }}</th>
                     <td>{{ $schedule->date }}</td>
                     <td>{{ $schedule->eta }}</td>

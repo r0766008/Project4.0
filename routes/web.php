@@ -108,5 +108,6 @@ Route::middleware(['auth', 'loadingemployee'])->prefix('loading')->group(functio
         'destroy' => 'loading.bays.destroy'
     ]);
     Route::resource('schedule', LoadingScheduleController::class);
+    Route::post('schedule/{schedule_id}/change', [LoadingScheduleController::class, 'changeStatus']);
 });
 

@@ -20,8 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/loadingemployee/schedule/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoadingEmployee/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoadingEmployee/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_102535_create_schedule_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102535_create_schedule_statuses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/loadingemployee/schedule/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/loadingemployee/schedule/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,24 +161,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/user/trucks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/loadingemployee/schedule" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\project\resources\views\user\trucks" />
-      <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\bays" />
-      <recent name="C:\xampp\htdocs\project\resources\views\logisticsemployee" />
-      <recent name="C:\xampp\htdocs\project\app\Http\Controllers\LogisticsEmployee" />
-      <recent name="C:\xampp\htdocs\project\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\project\resources\views\admin" />
       <recent name="C:\xampp\htdocs\project\app\Http\Controllers\Apis" />
       <recent name="C:\xampp\htdocs\project\resources\views\pagination" />
       <recent name="C:\xampp\htdocs\project\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\project\app\Http\Controllers\API" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\schedule" />
+      <recent name="C:\xampp\htdocs\project\resources\views\user\trucks" />
+      <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\bays" />
+      <recent name="C:\xampp\htdocs\project\resources\views\logisticsemployee" />
+      <recent name="C:\xampp\htdocs\project\app\Http\Controllers\LogisticsEmployee" />
     </key>
   </component>
   <component name="RunManager">
@@ -198,7 +204,8 @@
       <workItem from="1611818992130" duration="14734000" />
       <workItem from="1611844946535" duration="4178000" />
       <workItem from="1611906770356" duration="22098000" />
-      <workItem from="1612164698032" duration="6220000" />
+      <workItem from="1612164698032" duration="6860000" />
+      <workItem from="1612216746192" duration="1501000" />
     </task>
     <servers />
   </component>
@@ -218,10 +225,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612167974007">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612216884462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612167974007" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612216884462" />
     <state x="779" y="210" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1611822677919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
