@@ -17,10 +17,10 @@ class ScheduleController extends Controller
         $userbays = UserBay::where('user_id', auth()->user()->id)->pluck('bay_id')->toArray();
         $schedules = Schedule::where('date', $currentDay->toDateString())->whereIn('bay_id', $userbays)
             ->with('truck')->with('bay')->with('status')
-            ->latest()->orderBy('eta', 'desc')->orderBy('schedule_status_id', 'asc')->paginate(5);
+            ->orderBy('eta', 'desc')->orderBy('schedule_status_id', 'asc')->paginate(10);
 
         return view('loadingemployee.schedule.index', compact('schedules'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     public function show($id)

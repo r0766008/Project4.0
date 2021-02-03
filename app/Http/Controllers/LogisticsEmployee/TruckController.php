@@ -17,10 +17,10 @@ class TruckController extends Controller
      */
     public function index()
     {
-        $trucks = Truck::latest()->paginate(5);
+        $trucks = Truck::paginate(10);
 
         return view('logisticsemployee.trucks.index', compact('trucks'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**

@@ -27,7 +27,7 @@ use App\Http\Controllers\LoadingEmployee\ScheduleController as LoadingScheduleCo
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+Auth::routes(['register' => false]);
 Route::view('/', 'home');
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::redirect('/', 'admin/bays');
@@ -60,6 +60,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
         'update' => 'admin.schedules.update',
         'destroy' => 'admin.schedules.destroy'
     ]);
+    Route::post('schedules/dayschedule/create', [AdminScheduleController::class, 'daySchedule']);
     Route::resource('users', UserController::class);
 });
 Route::middleware(['auth', 'trucker'])->prefix('user')->group(function () {
@@ -98,6 +99,7 @@ Route::middleware(['auth', 'logisticemployee'])->prefix('logistics')->group(func
         'update' => 'logisticsemployee.schedules.update',
         'destroy' => 'logisticsemployee.schedules.destroy'
     ]);
+    Route::post('schedules/dayschedule/create', [LogisticsScheduleController::class, 'daySchedule']);
 });
 Route::middleware(['auth', 'loadingemployee'])->prefix('loading')->group(function () {
     Route::redirect('/', 'loading/bays');

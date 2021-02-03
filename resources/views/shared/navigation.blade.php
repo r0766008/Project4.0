@@ -16,9 +16,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register"><i class="fas fa-sign-in-alt"></i>Register</a>
-                    </li>
                 @endguest
                 @auth
                     <li class="nav-item dropdown">

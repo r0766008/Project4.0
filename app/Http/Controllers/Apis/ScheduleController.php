@@ -12,7 +12,7 @@ class ScheduleController extends Controller
     public function index()
     {
         $currentDay = Carbon::now();
-        $schedules = Schedule::select('schedules.id', 'date', 'eta', 'ata', 'atd', 'trucks.license_plate', 'trucks.company', 'bays.number', 'schedule_statuses.name')
+        $schedules = Schedule::select('schedules.id', 'date', 'eta', 'ata', 'atd', 'trucks.license_plate', 'trucks.rfid', 'trucks.company', 'bays.number', 'schedule_statuses.name')
             ->where('date', $currentDay->toDateString())
             ->join('user_trucks', 'user_trucks.id', '=', 'schedules.user_truck_id')
             ->join('trucks', 'trucks.id', '=', 'user_trucks.truck_id')

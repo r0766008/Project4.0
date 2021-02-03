@@ -20,13 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/loadingemployee/schedule/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TruckController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apis/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/ScheduleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoadingEmployee/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoadingEmployee/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_102535_create_schedule_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102535_create_schedule_statuses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/loadingemployee/schedule/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/loadingemployee/schedule/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/BayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/TruckController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedules/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedules/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,19 +176,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\project\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\project\app\Http\Controllers\Apis" />
-      <recent name="C:\xampp\htdocs\project\resources\views\pagination" />
-      <recent name="C:\xampp\htdocs\project\app\Http\Controllers" />
-      <recent name="C:\xampp\htdocs\project\app\Http\Controllers\API" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\schedule" />
       <recent name="C:\xampp\htdocs\project\resources\views\user\trucks" />
       <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\bays" />
       <recent name="C:\xampp\htdocs\project\resources\views\logisticsemployee" />
       <recent name="C:\xampp\htdocs\project\app\Http\Controllers\LogisticsEmployee" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\project\app\Http\Controllers\Apis" />
+      <recent name="C:\xampp\htdocs\project\resources\views\pagination" />
+      <recent name="C:\xampp\htdocs\project\app\Http\Controllers" />
+      <recent name="C:\xampp\htdocs\project\app\Http\Controllers\API" />
     </key>
   </component>
   <component name="RunManager">
@@ -206,6 +216,9 @@
       <workItem from="1611906770356" duration="22098000" />
       <workItem from="1612164698032" duration="6860000" />
       <workItem from="1612216746192" duration="1501000" />
+      <workItem from="1612251402898" duration="2445000" />
+      <workItem from="1612297065095" duration="5445000" />
+      <workItem from="1612337601800" duration="6802000" />
     </task>
     <servers />
   </component>
@@ -257,6 +270,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="dock-window-3/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611941463873" />
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1612302418880">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612302418880" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1612339038258">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612339038258" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612165043404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

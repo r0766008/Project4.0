@@ -18,10 +18,10 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        $schedules = Schedule::with('truck')->with('bay')->with('status')->latest()->paginate(5);
+        $schedules = Schedule::with('truck')->with('bay')->with('status')->paginate(10);
 
         return view('logisticsemployee.schedules.index', compact('schedules'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
@@ -62,7 +62,7 @@ class ScheduleController extends Controller
      * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function show(Schedule $schedule)
+    public function show($id)
     {
         $schedule = Schedule::with('truck')->with('bay')->with('status')->findOrFail($id);
         return view('logisticsemployee.schedules.show', compact('schedule'));
@@ -114,5 +114,41 @@ class ScheduleController extends Controller
 
         return redirect()->route('logisticsemployee.schedules.index')
             ->with('success', 'Schedule has successfully been deleted.');
+    }
+
+    public function daySchedule(Request $request)
+    {
+        $request->validate([
+            'date' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'time_interval' => 'required|integer',
+            'user_truck_id' => 'required'
+        ]);
+
+        $bays = Bay::pluck('id')->toArray();
+        $newtime = date("H:i", strtotime('+0 minutes', strtotime($request->start_time)));
+        $i = 0;
+        foreach ($request->user_truck_id as $usertruck) {
+            $bay = $bays[$i];
+            Schedule::create([
+                'date' => $request->date,
+                'eta' => $newtime,
+                'user_truck_id' => $usertruck,
+                'bay_id' => $bay,
+                'schedule_status_id' => 1
+            ]);
+            if ($bay == $bays[count($bays) - 1]) {
+                $i = 0;
+                $newtime = date("H:i", strtotime('+' . $request->time_interval . ' minutes', strtotime($newtime)));
+                if (strtotime($newtime) > strtotime($request->end_time)) {
+                    return redirect()->route('logisticsemployee.schedules.index')
+                        ->with('warning', 'Not everyone could have been planned within the given time frame.');
+                }
+            } else $i++;
+        }
+
+        return redirect()->route('logisticsemployee.schedules.index')
+            ->with('success', 'Schedule has successfully been created.');
     }
 }

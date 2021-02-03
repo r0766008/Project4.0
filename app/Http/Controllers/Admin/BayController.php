@@ -16,10 +16,10 @@ class BayController extends Controller
      */
     public function index()
     {
-        $bays = Bay::with('status')->paginate(5);
+        $bays = Bay::with('status')->paginate(10);
 
         return view('admin.bays.index', compact('bays'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**

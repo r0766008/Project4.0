@@ -14,9 +14,9 @@ class ScheduleController extends Controller
         $usertrucks = UserTruck::where('user_id', auth()->user()->id)->pluck('truck_id')->toArray();
         $schedules = Schedule::whereIn('user_truck_id', $usertrucks)->with('truck')->with('bay')->with('status')
             ->orderBy('schedule_status_id', 'ASC')->orderBy('date', 'DESC')
-            ->paginate(5);
+            ->paginate(10);
 
         return view('user.schedules.index', compact('schedules'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 }
