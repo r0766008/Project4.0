@@ -21,23 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BayController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TruckController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apis/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoadingEmployee/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoadingEmployee/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/BayController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/TruckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LogisticsEmployee/TruckController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedules/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedules/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedules/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/logisticsemployee/schedules/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +203,8 @@
       <workItem from="1612216746192" duration="1501000" />
       <workItem from="1612251402898" duration="2445000" />
       <workItem from="1612297065095" duration="5445000" />
-      <workItem from="1612337601800" duration="6802000" />
+      <workItem from="1612337601800" duration="6936000" />
+      <workItem from="1612359445327" duration="188000" />
     </task>
     <servers />
   </component>

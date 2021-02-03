@@ -30,3 +30,4 @@ Route::get('bays', [BayController::class, 'index']);
 Route::get('bays/schedules', [BayController::class, 'schedules']);
 
 Route::get('schedules', [ScheduleController::class, 'index']);
+Route::get('schedules/finished', [ScheduleController::class, 'finished']);
