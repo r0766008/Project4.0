@@ -32,4 +32,20 @@ class BayController extends Controller
             ->get();
         return compact('bays', 'schedules');
     }
+
+    public function starting($id)
+    {
+        Bay::find($id)->update([
+            'bay_status_id' => 3
+        ]);
+        return Bay::find($id);
+    }
+
+    public function stopping($id)
+    {
+        Bay::find($id)->update([
+            'bay_status_id' => 4
+        ]);
+        return Bay::find($id);
+    }
 }

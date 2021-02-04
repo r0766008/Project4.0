@@ -29,6 +29,14 @@ class CreateBayStatusesTable extends Migration
                     'name' => 'In use',
                     'created_at' => now()
                 ],
+                [
+                    'name' => 'Starting Unloading/Loading',
+                    'created_at' => now()
+                ],
+                [
+                    'name' => 'Finishing Unloading/Loading',
+                    'created_at' => now()
+                ],
             ]
         );
     }

@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apis/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_092129_create_bay_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092129_create_bay_statuses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_102535_create_schedule_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102535_create_schedule_statuses_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +206,8 @@
       <workItem from="1612251402898" duration="2445000" />
       <workItem from="1612297065095" duration="5445000" />
       <workItem from="1612337601800" duration="6936000" />
-      <workItem from="1612359445327" duration="188000" />
+      <workItem from="1612359445327" duration="902000" />
+      <workItem from="1612431795058" duration="579000" />
     </task>
     <servers />
   </component>

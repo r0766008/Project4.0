@@ -33,14 +33,6 @@ class CreateScheduleStatusesTable extends Migration
                     'name' => 'Finished',
                     'created_at' => now()
                 ],
-                [
-                    'name' => 'Starting Unloading/Loading',
-                    'created_at' => now()
-                ],
-                [
-                    'name' => 'Finishing Unloading/Loading',
-                    'created_at' => now()
-                ],
             ]
         );
     }

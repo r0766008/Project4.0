@@ -28,6 +28,8 @@ Route::get('truck/departure/{info}', [TruckController::class, 'registerTruckDepa
 
 Route::get('bays', [BayController::class, 'index']);
 Route::get('bays/schedules', [BayController::class, 'schedules']);
+Route::get('bays/start/{bay_id}', [BayController::class, 'starting']);
+Route::get('bays/stop/{bay_id}', [BayController::class, 'stopping']);
 
 Route::get('schedules', [ScheduleController::class, 'index']);
 Route::get('schedules/finished', [ScheduleController::class, 'finished']);
