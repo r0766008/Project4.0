@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apis/BayController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_092129_create_bay_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_092129_create_bay_statuses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_102535_create_schedule_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_102535_create_schedule_statuses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +33,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -158,18 +160,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/loadingemployee/schedule" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\schedule" />
-      <recent name="C:\xampp\htdocs\project\resources\views\user\trucks" />
-      <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\bays" />
-      <recent name="C:\xampp\htdocs\project\resources\views\logisticsemployee" />
-      <recent name="C:\xampp\htdocs\project\app\Http\Controllers\LogisticsEmployee" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\project\resources\views\admin" />
       <recent name="C:\xampp\htdocs\project\app\Http\Controllers\Apis" />
@@ -177,6 +172,25 @@
       <recent name="C:\xampp\htdocs\project\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\project\app\Http\Controllers\API" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\schedule" />
+      <recent name="C:\xampp\htdocs\project\resources\views\user\trucks" />
+      <recent name="C:\xampp\htdocs\project\resources\views\loadingemployee\bays" />
+      <recent name="C:\xampp\htdocs\project\resources\views\logisticsemployee" />
+      <recent name="C:\xampp\htdocs\project\app\Http\Controllers\LogisticsEmployee" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -184,7 +198,10 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c2b83415-5fe1-4eb6-b36c-2d6e09de25c9" name="Default Changelist" comment="" />
@@ -208,23 +225,26 @@
       <workItem from="1612337601800" duration="6936000" />
       <workItem from="1612359445327" duration="902000" />
       <workItem from="1612431795058" duration="579000" />
+      <workItem from="1613462099501" duration="3113000" />
+      <workItem from="1613547290169" duration="1429000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612216884462">
